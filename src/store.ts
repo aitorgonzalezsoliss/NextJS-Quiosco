@@ -17,7 +17,6 @@ export const useStore = create<Store>((set, get) => ({
 
       const { categoryId, image, ...data} = product
       let order : OrderItem[] = []
-      // console.log(data);
 
       if(get().order.find(item => item.id === product.id)) {
         order = get().order.map( item => item.id === product.id 
